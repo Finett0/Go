@@ -9,3 +9,5 @@ func main() {
 	fmt.Println("Olá, Me chamo ", nome, " e tenho ", idade, " anos")
 	fmt.Println("Este programa está na versão ", versao)
 }
+
+//Obs: Não é possivel declarar uma variavel e não atribuir valor a ela, o codigo não vai compilar
