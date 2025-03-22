@@ -25,6 +25,9 @@ func main() {
 		fmt.Println("Exibindo...")
 	} else if comando == 3 {
 		fmt.Println("Saindo do programa!")
+
+	} else {
+		fmt.Println("Opção não encontrada!")
 	}
 
 }
