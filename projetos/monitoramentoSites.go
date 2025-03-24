@@ -4,7 +4,11 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 )
+
+const monitoramentos = 3
+const delay = 5
 
 func main() {
 	exibirIntroducao()
@@ -54,13 +58,27 @@ func lerComando() int {
 
 func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
-	site := "https://www.coinbase.com/pt-br"
+	sites := []string{"https://www.binance.com/pt-BR",
+		"https://www.rico.com.vc/", "https://www.coinbase.com/pt-br"}
+	fmt.Println(sites)
+
+	for i := 0; i < monitoramentos; i++ {
+		for i, site := range sites {
+			fmt.Println(i, ":", site)
+			testaSite(site)
+		}
+		time.Sleep(delay * time.Minute)
+	}
+	fmt.Println("")
+}
+
+func testaSite(site string) {
 	resp, _ := http.Get(site)
 
 	if resp.StatusCode == 200 {
-		fmt.Println("Site:", site, " foi carregado com sucesso")
+		fmt.Println("Site:", site, "foi carregado com sucesso!")
 	} else {
-		fmt.Println("Site:", site, "está com problemas. Status Code:", resp.StatusCode)
+		fmt.Println("Site: ", site, "está com problemas. Status Code: ", resp.StatusCode)
 	}
 
 }
