@@ -15,7 +15,7 @@ const delay = 5
 
 func main() {
 	exibirIntroducao()
-	lerArquivoSites()
+
 	for {
 		exibeMenu()
 
@@ -102,6 +102,7 @@ func lerArquivoSites() []string {
 	}
 
 	leitor := bufio.NewReader(arquivo)
+
 	for {
 		linha, err := leitor.ReadString('\n')
 		linha = strings.TrimSpace(linha)
