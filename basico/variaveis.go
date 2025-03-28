@@ -3,11 +3,34 @@ package main
 import "fmt"
 
 func main() {
-	var nome string = "Giovanni" // Você declara o nome e depois o tipo da variavel
-	var versao float32 = 1.1
-	var idade int = 20
-	fmt.Println("Olá, Me chamo ", nome, " e tenho ", idade, " anos")
-	fmt.Println("Este programa está na versão ", versao)
-}
 
-//Obs: Não é possivel declarar uma variavel e não atribuir valor a ela, o codigo não vai compilar
+	//Declaração explicita
+	var cidade string = "São Paulo"
+	fmt.Println("Eu moro na cidade:", cidade)
+
+	//Declarando de forma implicita, tambem chamado de inferencia
+	meuEstado := "Sp"
+	fmt.Println("Meu estado é:", meuEstado)
+
+	//Declarando mais de uma variavel
+	var (
+		paisAtual string = "Brasil"
+		paisSonho string = "Inglaterra"
+	)
+	fmt.Println("Meu pais atual é: ", paisAtual)
+	fmt.Println("Mas meu sonho é ir para: ", paisSonho)
+
+	//Trocando o valor da variaveis
+	variavel1 := 1
+	variavel2 := 2
+	fmt.Println(variavel1)
+	fmt.Println(variavel2)
+	variavel1, variavel2 = variavel2, variavel1
+	println("O Valor da Variavel1 é: ", variavel1, "E o valor da Variavel2 é:", variavel2)
+
+	//Você pode declarar contantes da mesma forma que as variaveis, a unica diferença é que as constantes são imutaveis
+
+	const nome string = "Giovanni"
+	fmt.Println("E por fim meu nome é: ", nome)
+
+}
