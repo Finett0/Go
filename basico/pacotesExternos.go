@@ -7,7 +7,6 @@ import (
 	"github.com/badoux/checkmail"
 )
 
-// Rode o comando go get <pacote externo> no terminal para importar o pacote
 
 func main() {
 	fmt.Println("Hello World!")
