@@ -28,7 +28,7 @@ func main() {
 	variavel1, variavel2 = variavel2, variavel1
 	println("O Valor da Variavel1 é: ", variavel1, "E o valor da Variavel2 é:", variavel2)
 
-	//Você pode declarar contantes da mesma forma que as variaveis, a unica diferença é que as constantes são imutaveis
+	
 
 	const nome string = "Giovanni"
 	fmt.Println("E por fim meu nome é: ", nome)
