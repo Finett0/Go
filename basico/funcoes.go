@@ -16,7 +16,7 @@ func main() {
 	case 1:
 		fmt.Println("Monitorando...")
 	case 2:
-		fmt.Println("Exibindo...")
+		fmt.Println("Exibindo..")
 	case 3:
 		fmt.Println("Saindo do programa...")
 		os.Exit(0)
