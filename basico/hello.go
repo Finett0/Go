@@ -1,4 +1,4 @@
-package main //é o pacote que contém o código que será executado quando o programa for iniciado.
+package main //é o pacote que contém o codigo que será executado quando o programa for iniciado.
 
 import "fmt" //Tras um pacote externo para dentro do seu código
 
